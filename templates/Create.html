@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <style>
+        .parent{
+            border:1px solid black;
+            border-radius: 10px;
+            width:30vw;
+            height: 64vh;
+            padding:10px;
+            margin-top: 9%;
+            background-color: #949398;
+        }
+        body{
+            background-color: #f4df4e;
+        }
+        input{
+            width:80%;
+            padding: 5px;
+        }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center><h2>{{ message }}</h2></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <center>
+        <form method="POST">
+            <div class="parent">
+                <h1>Registration Form</h1>
+                <label>Username</label></br>
+                <input type="text" name="username" placeholder="Enter your Username: "/></br></br>
+                <label>Email</label></br>
+                <input type="text" name="email" placeholder="Enter your Email ID: "/></br></br>
+                <label>Password</label></br>
+                <input type="password" name="password" placeholder="Enter your Password: "/></br></br>
+                <label>Confirm Password</label></br>
+                <input type="password" name="confirm_password" placeholder="Confirm your Password: "/></br></br>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        a{
+            text-decoration: none;
+            color:black;
+            background-color: white; 
+            padding:10px 50px;
+        }
+        a:hover{
+            color:black;
+            background-color: coral;
+        }
+        h1{
+            /* color:blueviolet; */
+            animation-name: blur;
+            animation-iteration-count: infinite;
+            animation: blur 10s infinite;
+        }
+        @keyframes blur {
+            0% {
+                color: transparent;
+                text-shadow: 0 0 5px white;
+            }
+            25%{
+                color:beige;
+            }
+            50%{
+                color: transparent;
+                text-shadow: 0 0 5px white;
+            }
+            75%{
+                color:grey;
+            }
+            100%{
+                color: transparent;
+                text-shadow: 0 0 5px white;
+            }
+        }
+        body{
+            background-color: black;
+        }
+        .parent{
+            margin-top: 15%;
+            border-radius: 10px;
+            background-color:wheat;
+            width:30vw;
+            height: 39vh;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+            <div class="parent">
+                <marquee><h1>Welcome to Simple Notes</h1></marquee></br>
+                <a href="{{url_for('create')}}" class="create">Create</a></br></br></br></br>
+                <a href="{{url_for('Login')}}" class="login">Login</a>
+            </div>
+        
+    </center>
+</body>
+
+</html>

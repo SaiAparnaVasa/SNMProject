@@ -1,0 +1,15 @@
+{% extends 'Dashboard.html' %}
+{% block addcss %} 
+<link rel="stylesheet" href="{{url_for('static',filename='Add_Notes.css')}}">
+{% endblock %}
+{% block content %}
+    <center>
+        <form method="POST" enctype="multipart/form-data">
+            <div class="container">
+                <label>Choose me</label></br>
+                <input type="file" name="choose_me" placeholder="Browse files and place here"/></br></br>
+                <button type="submit">Upload</button>
+            </div>
+        </form>
+    </center>
+{% endblock content %}

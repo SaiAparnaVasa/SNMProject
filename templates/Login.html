@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+      form{
+        /* border:1px solid black; */
+        width:20%;
+        margin-top: 16%;
+        background-color:#f79991;
+      }
+      body{
+        background-color: #5b84b0;
+      }
+      h2{
+        color:white;
+      }
+    </style>
+</head>
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    {% for message in messages %}
+      <center><h2>{{ message }}</h2></center>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+<body>
+    <center>
+        <form method="POST">
+            <div class="parent">
+                <label>Email</label></br>
+                <input type="text" name="email" placeholder="Enter your username"/></br>
+                <label>Password</label></br>
+                <input type="password" name="password" placeholder="Enter your password"/></br></br>
+                <button>Submit</button></br></br>
+                <a href="">Forget Password</a>
+            </div>
+        </form>
+    </center>
+</body>
+</html>
